@@ -1,0 +1,44 @@
+{
+    "name": "metafox/background-status",
+    "version": "5.0.4",
+    "description": "",
+    "authors": [
+        {
+            "name": "phpFox",
+            "email": "dev@phpfox.com",
+            "homepage": "https://www.phpfox.com"
+        }
+    ],
+    "extra": {
+        "metafox": {
+            "core": false,
+            "path": "packages/metafox/background-status",
+            "title": "Background Status",
+            "alias": "backgroundstatus",
+            "asset": "bgs",
+            "namespace": "MetaFox\\BackgroundStatus",
+            "internalAdminUrl": "/admincp/bgs/collection/browse",
+            "providers": [
+                "MetaFox\\BackgroundStatus\\Providers\\PackageServiceProvider"
+            ],
+            "frontend": {
+                "@metafox/bgstatus": "*"
+            },
+            "frontendPaths": [
+                "packages/metafox/bgstatus"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "MetaFox\\BackgroundStatus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MetaFox\\BackgroundStatus\\Tests\\": "tests/"
+        }
+    }
+}

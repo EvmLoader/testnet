@@ -1,0 +1,42 @@
+{
+    "name": "metafox/quota",
+    "version": "5.0.4",
+    "description": "Quota Control",
+    "keyword": "metafox, quota, quota control",
+    "authors": [
+        {
+            "name": "phpFox",
+            "homepage": "https://www.phpfox.com"
+        }
+    ],
+    "extra": {
+        "metafox": {
+            "core": true,
+            "priority": 4,
+            "alias": "quota",
+            "asset": "quota",
+            "namespace": "MetaFox\\QuotaControl",
+            "path": "packages/framework/quota",
+            "title": "Quota Control",
+            "providers": [
+                "MetaFox\\QuotaControl\\Providers\\PackageServiceProvider"
+            ],
+            "aliases": {
+            },
+            "frontend": {
+                "@metafox/quota": "*"
+            },
+            "internalAdminUrl": "/admincp/quota/permission"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "MetaFox\\QuotaControl\\": "src/"
+        }
+    },
+    "autoload-dev":{
+        "psr-4": {
+            "MetaFox\\QuotaControl\\Tests\\": "tests/"
+        }
+    }
+}
